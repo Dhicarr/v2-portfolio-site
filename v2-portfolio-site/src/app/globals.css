@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'sfMono';
+  font-style: normal;
+  font-weight: normal;
+  src: local('SF Mono Regular'), url('./Fonts/SFMonoRegular.woff') format('woff');
+  }
+
+@font-face {
+  font-family: 'sfMonoLight';
+  font-style: normal;
+  font-weight: normal;
+  src: local('SF Mono Light'), url('./Fonts/SFMonoLight.woff') format('woff');
+  }
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+    font-family: 'system-ui';
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
