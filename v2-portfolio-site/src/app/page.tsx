@@ -1,4 +1,5 @@
 import Image from "next/image";
+import AppButton from "./Components/appButton";
 
 export default function Home() {
   return (
@@ -70,10 +71,14 @@ export default function Home() {
               </div>
             </div>
             <div>
-              Skills
+              <h2 className="text-slate-200 text-2xl">Skills</h2>
+              <div className="flex flex-wrap space-x-3">
+                <AppButton name="Javascript"/>
+                <AppButton name="React.js"/>
+              </div>
             </div>
             <div>
-              Projects
+              <h2 className="text-slate-200 text-2xl">Projects</h2>
             </div>
           </div>
         </div>
